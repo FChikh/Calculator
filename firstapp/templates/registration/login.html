@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <title>Вход</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #000647;
+        }
+    </style>
+</head>
+<body>
+<form action="/login/" method="POST">
+    {% csrf_token %}
+    <div class="pl-2">
+        <br>
+        <h6>{{ form.as_p }}</h6>
+        <button type="submit" class="btn btn-primary" title="submit" >Зарегистрироваться</button>
+        <hr>
+        <h6>Not registered yet? Click <a href="/register/">here</a></h6>
+    </div>
+</form>
+</body>
+</html>
